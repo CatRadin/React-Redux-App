@@ -13,7 +13,7 @@ height: 100vh;
 background: url('https://cdna.artstation.com/p/assets/images/images/007/531/558/4k/grace-liu-bc-bg-forest-a-01.jpg?1506781091');
 background-repeat: no-repeat;
 background-size: cover;
-color: #DEDEDE;
+color: #e9e5e5;
 }
 .blur{
     width: 100vw;
@@ -38,12 +38,16 @@ justify-content: center;
 
 .pokedex-container {
     width: 60vw;
-    height: 50vh;
-    border-radius: 5rem;
+    height: 45vh;
+    border-radius: 2rem;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    background: #3B4CCA;
+     background: linear-gradient(
+    to right bottom,
+    rgba(90, 119, 110, 0.7),
+    rgba(56, 68, 138, 0.3)
+  );
 }
 
 
