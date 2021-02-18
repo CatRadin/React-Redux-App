@@ -2,9 +2,11 @@ import { FETCH_POKEMON_LOADING, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAIL} from 
 
 //Initial State on Load in -----------------------------------------------
 const initialState = {
+    pokemans:'Pikachu',
     pokemonName:'',
     isFetching: false,
-    error:''
+    error:'',
+    success: false,
 }
 
 export const reducer = (state = initialState, action) => {
@@ -17,14 +19,16 @@ export const reducer = (state = initialState, action) => {
         case(FETCH_POKEMON_SUCCESS):
             return({
                  ...state,
-                pokemonName: action.payload,
-                 isFetching: false
+                pokemans: action.payload,
+                 isFetching: false,
+                 success: true,
                 });
         case(FETCH_POKEMON_FAIL):
             return({
                 ...state,
                 error: action.payload,
-                isFetching: false
+                isFetching: false,
+                success: false,
             })
         default:
             return state;

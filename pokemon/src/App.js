@@ -4,8 +4,12 @@ import Pokemon from './components/Pokemon'
 function App() {
   return (
     <div className="App">
-      <h1>Get Pokemon ✨</h1>
+      <div className ="red-bar">
+        <h1>Get Pokemon</h1>
+        </div>
+      <div className='blur'>
       <Pokemon />
+      </div>
     </div>
   );
 }

@@ -1,46 +1,71 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
 import { getPokemon } from '../actions'
 import axios from 'axios'
 
+
+
 const Pokemon = (props) => {
-const { pokemonName, isFetching, error, getPokemon } = props
+const { pokemans, isFetching, error, getPokemon, success } = props
+const [pokemon, setPokemon] = useState({
+    name: 'Pikachu',
+    sprites: {
+        front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        other: {
+            official_artwork: {
+                front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+            }
+        }
+    }
+})
+
+
+
+
+useEffect(() => {
+    axios.get(`${pokemans.url}`)
+        .then(res => {
+            console.log("look here", res)
+            setPokemon(res.data)
+        })
+}, [pokemans])
+
+console.log('Pokenonxxx',pokemon)
+// console.log(pokemon.sprites.front_default)
+
 const handleClick = () => {
-    // axios
-    // .get('https://pokeapi.co/api/v2/pokemon?limit=828')
-    // .then(res=>{
-    //     let ranNum = Math.floor(Math.random() * 828)
-    //     console.log(ranNum);
-    //     console.log('NAME :', res.data.results[ranNum])
-           
-    //     // dispatch({type:FETCH_POKEMON_SUCCESS, payload:res.data});
-    // })
-    // .catch(err=>{
-    //     // dispatch({type:FETCH_POKEMON_FAIL, payload:err.Response.code})
-    // });
-    props.getPokemon();
+    props.getPokemon(); 
 }
 
-if (error){
-    return <h2>We got an error: {error}</h2>
-}
-if(isFetching){
-    return<h2>Fetching Pokemon for you!</h2>
-}
+// if (success){
+//     return <h2>We got an error: {error}</h2>
+// }
+// if(isFetching){
+//     return<h2>Fetching a Pokemon for you!</h2>
+// }
 
     return(
         <>
-        <h3>{pokemonName}</h3>
-        <button onClick={handleClick}>Get new Pokemon</button>
+        <div className='pokedex-container'>
+        
+        <h3>{pokemon.name}</h3>
+        <div className='middle'>
+        <img src={pokemon.sprites.front_default} alt='a pokemon'></img>
+        </div>
+        
+        {/* <img src={pokemon.sprites.other.official_artwork.front_default} alt='a pokemon'></img> */}
+        <button onClick={handleClick}>Get a random Pokemon</button>
+        </div>
         </>
     )
 }
 //Mapping my Props -----------------------------------------
 const mapStateToProps = state => {
     return {
-        pokemonName: state.pokemonName,
+        pokemans: state.pokemans,
         isFetching: state.isFetching,
-        error: state.error
+        error: state.error,
+        success: state.success
     }
 }
 export default connect(mapStateToProps, { getPokemon })(Pokemon)

@@ -9,14 +9,13 @@ export const getPokemon = () => {
     //3. success on a successful call
     //4. fail on a failed call
     return dispatch => {
+        let ranNum = Math.floor(Math.random() * 828 -1)
         dispatch({ type:FETCH_POKEMON_LOADING });
         axios
         .get('https://pokeapi.co/api/v2/pokemon?limit=828')
         .then(res=>{
-            let ranNum = Math.floor(Math.random() * 828)
-            console.log(ranNum);
-            console.log('NAME :', res.data.results[ranNum].url)
-            dispatch({type:FETCH_POKEMON_SUCCESS, payload:res.data.results[ranNum].name});
+            console.log('NAME :', res.data.results[ranNum])
+            dispatch({type:FETCH_POKEMON_SUCCESS, payload:res.data.results[ranNum]});
         })
         .catch(err=>{
             // dispatch({type:FETCH_POKEMON_FAIL, payload:err.Response.code})

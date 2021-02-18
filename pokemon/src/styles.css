@@ -7,8 +7,63 @@
 }
 
 .App {
+
+width: 100vw;
+height: 100vh;
+background: url('https://cdna.artstation.com/p/assets/images/images/007/531/558/4k/grace-liu-bc-bg-forest-a-01.jpg?1506781091');
+background-repeat: no-repeat;
+background-size: cover;
+color: #DEDEDE;
+}
+.blur{
+    width: 100vw;
+    height: 100vh;  
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px); 
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.red-bar {
+width:100vw;
+height: 5rem;
+background: #CC0000;
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
+justify-content: center;
+}
+
+.pokedex-container {
+    width: 60vw;
+    height: 50vh;
+    border-radius: 5rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    background: #3B4CCA;
+}
+
+
+.pokedex-container h3 {
+    color: #DEDEDE;
+    font-size: 4rem;
+}
+
+.pokedex-container img {
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 3rem;
+}
+
+.pokedex-container button {
+    background: #3B4CCA;
+    border: none;
+    font-size: 1.3rem;
+    padding: 1rem;
+    color: #FFDE00;
+    outline: none;
+    font-weight: bold;
 }
