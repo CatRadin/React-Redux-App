@@ -48,13 +48,17 @@ align-items: center;
 
 .red-bar {
 width:100vw;
-height: 5rem;
+height: 4rem;
 background: #CC0000;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
 justify-content: center;
-margin-top: -1rem;
+}
+
+.red-bar img { 
+    height: 3rem;
+    
 }
 
 .pokedex-container {
@@ -104,3 +108,213 @@ margin-top: -1rem;
     outline: none;
     font-weight: bold;
 } 
+
+.typeElectric {
+    background: yellow;
+}
+
+@media screen and (max-width: 480px) {
+    .pokedex-container{
+        width: 70vw;
+    }
+    .pokedex-container h3 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+
+     p {
+        margin-top: -2rem;
+        font-size: 1.3rem;
+    }
+    
+    .pokedex-container button {
+        font-size: 1.2rem;
+        padding:0.3rem;
+        margin-top: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    .pokedex-container{
+        width: 80vw;
+        height: 60vh;
+    }
+    .pokedex-container h3 {
+        font-size: 2rem;
+        
+    }
+
+     p {
+        
+        font-size: 0.5rem;
+    
+    }
+    
+    .pokedex-container button {
+        font-size: 1.2rem;
+        padding:0.3rem;
+        margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    .pokedex-container{
+        width: 70vw;
+        height: 65vh;
+    }
+    .pokedex-container h3 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+
+     p {
+        margin-top: -2rem;
+        font-size: 1.3rem;
+    }
+    
+    .pokedex-container button {
+        font-size: 1.2rem;
+        padding:0.3rem;
+        margin-top: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .pokedex-container{
+        width: 70vw;
+        height: 65vh;
+    }
+    .pokedex-container h3 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+
+     p {
+        margin-top: -2rem;
+        font-size: 1.3rem;
+        
+    }
+    
+    .pokedex-container button {
+        font-size: 1.2rem;
+        padding:0.3rem;
+        
+    }
+  }
+
+  @media screen and (max-width: 1206px) {
+    .pokedex-container{
+        width: 70vw;
+        height: 65vh;
+    }
+    .pokedex-container h3 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+
+     p {
+        margin-top: -2rem;
+        font-size: 1.3rem;
+        
+        
+    }
+    
+    .pokedex-container button {
+        font-size: 1.2rem;
+        padding:0.3rem;
+        
+    }
+  }
+
+  /* For 1024 Resolution */  
+@media only screen   
+and (min-device-width : 768px)   
+and (max-device-width : 1024px)  
+{ .pokedex-container{
+    width: 70vw;
+    height: 50vh;
+}
+.pokedex-container h3 {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+}
+
+ p {
+    margin-top: -2rem;
+    font-size: 1.5rem;
+    
+    
+}
+
+.pokedex-container button {
+    font-size: 1.5rem;
+    padding:0.3rem;
+    
+}
+}
+
+/* For 1366 Resolution */  
+@media only screen   
+and (min-width: 1030px)   
+and (max-width: 1366px)  
+{ .pokedex-container{
+    width: 70vw;
+    height: 45vh;
+}
+.pokedex-container h3 {
+    font-size: 4rem;
+    margin-bottom: 0.2rem;
+}
+
+ p {
+    margin-top: -2rem;
+    font-size: 2.3rem;
+    
+    
+    
+}
+
+.pokedex-container button {
+    font-size: 2rem;
+    padding:0.3rem;
+    
+}}  
+@media only screen   
+and (min-width: 1370px)  
+and (max-width: 1605px)  
+{ .pokedex-container{
+    width: 70vw;
+    height: 45vh;
+}
+.pokedex-container h3 {
+    font-size: 4rem;
+    margin-bottom: 0.2rem;
+    margin-bottom: 4rem;
+}
+
+ p {
+    margin-top: 2rem;
+    font-size: 2.3rem;
+    
+    
+    
+}
+
+.pokedex-container button {
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding:0.3rem;
+    
+}} 
+
+@media screen and (min-width: 1031px){
+    .pokedex-container {
+        height: 70vh;
+    }
+}
+ 
+@media screen and (min-width: 2000px){
+    .pokedex-container {
+        height: 50vh;
+    }
+}

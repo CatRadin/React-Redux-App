@@ -25,9 +25,6 @@ const [pokemon, setPokemon] = useState({
     }]
 })
 
-
-
-
 useEffect(() => {
     axios.get(`${pokemans.url}`)
         .then(res => {
@@ -37,19 +34,11 @@ useEffect(() => {
 }, [pokemans])
 
 console.log('Pokenonxxx',pokemon)
-// console.log(pokemon.sprites.front_default)
 
 const handleClick = () => {
     props.getPokemon(); 
 }
 
-// if (success){
-//     return <h2>We got an error: {error}</h2>
-// }
-// if(isFetching){
-//     return<h2>Fetching a Pokemon for you!</h2>
-// }
-// console.log('TYPE HERE:', pokemon.types[0].type.name)
 
     return(
         <>
@@ -58,10 +47,8 @@ const handleClick = () => {
         <h3>{pokemon.name}</h3>
         <div className='middle'>
         <img src={pokemon.sprites.front_default} alt='a pokemon'></img>
-        <p>{pokemon.types[0].type.name} Pokemon</p>
+        <p><span className='type'>{pokemon.types[0].type.name}</span> Pokemon</p>
         </div>
-        
-        {/* <img src={pokemon.sprites.other.official_artwork.front_default} alt='a pokemon'></img> */}
         <button onClick={handleClick}>Get a random Pokemon</button>
         </div>
         </>
