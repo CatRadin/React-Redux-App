@@ -313,7 +313,7 @@ and (max-width: 1605px)
 
 @media screen and (min-width: 1031px){
     .pokedex-container {
-        height: 70vh;
+        height: 66vh;
     }
 }
  
