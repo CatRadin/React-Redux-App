@@ -15,29 +15,29 @@ body,html {
 }
 body {
     box-sizing: border-box;
-    background: url('https://cdna.artstation.com/p/assets/images/images/007/531/558/4k/grace-liu-bc-bg-forest-a-01.jpg?1506781091');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/007/531/558/4k/grace-liu-bc-bg-forest-a-01.jpg?1506781091');
+    height: 100%;
+    width: 100%;
+    /* background:cadetblue; */
     color: #e9e5e5;
-    margin: 0;
-    padding: 0;
-    
+ background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  
+  
 
 }
 
-.App {
+ .App {
     margin: 0;
     padding: 0;
     
 }
 .blur{
-width: 100vw;
-height: 100vh;  
+
 background: rgba(255, 255, 255, 0.2);
-background-repeat: no-repeat;
-background-size: cover;
+height: 100vh;
+
 backdrop-filter: blur(5px); 
 display: flex;
 flex-direction: column;
@@ -103,4 +103,4 @@ margin-top: -1rem;
     color: #FFDE00;
     outline: none;
     font-weight: bold;
-}
+} 
