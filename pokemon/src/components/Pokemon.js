@@ -16,7 +16,13 @@ const [pokemon, setPokemon] = useState({
                 front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
             }
         }
-    }
+    },
+    types: [{ 
+        type: {
+            name: "electric",
+        }
+    
+    }]
 })
 
 
@@ -43,6 +49,7 @@ const handleClick = () => {
 // if(isFetching){
 //     return<h2>Fetching a Pokemon for you!</h2>
 // }
+// console.log('TYPE HERE:', pokemon.types[0].type.name)
 
     return(
         <>
@@ -51,6 +58,7 @@ const handleClick = () => {
         <h3>{pokemon.name}</h3>
         <div className='middle'>
         <img src={pokemon.sprites.front_default} alt='a pokemon'></img>
+        <p>{pokemon.types[0].type.name} Pokemon</p>
         </div>
         
         {/* <img src={pokemon.sprites.other.official_artwork.front_default} alt='a pokemon'></img> */}

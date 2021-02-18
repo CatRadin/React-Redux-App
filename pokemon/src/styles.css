@@ -1,28 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 *{
     text-align: center;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
     
+    
+}
+body,html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    background: url('https://cdna.artstation.com/p/assets/images/images/007/531/558/4k/grace-liu-bc-bg-forest-a-01.jpg?1506781091');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    color: #e9e5e5;
+    margin: 0;
+    padding: 0;
+    
+
 }
 
 .App {
-
-width: 100vw;
-height: 100vh;
-background: url('https://cdna.artstation.com/p/assets/images/images/007/531/558/4k/grace-liu-bc-bg-forest-a-01.jpg?1506781091');
-background-repeat: no-repeat;
-background-size: cover;
-color: #e9e5e5;
+    margin: 0;
+    padding: 0;
+    
 }
 .blur{
-    width: 100vw;
-    height: 100vh;  
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px); 
-    display: flex;
+width: 100vw;
+height: 100vh;  
+background: rgba(255, 255, 255, 0.2);
+background-repeat: no-repeat;
+background-size: cover;
+backdrop-filter: blur(5px); 
+display: flex;
 flex-direction: column;
 align-items: center;
+
 
 }
 
@@ -34,11 +54,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-top: -1rem;
 }
 
 .pokedex-container {
     width: 60vw;
-    height: 45vh;
+    height: 50vh;
     border-radius: 2rem;
     margin-top: 5rem;
     display: flex;
@@ -54,6 +75,8 @@ justify-content: center;
 .pokedex-container h3 {
     color: #DEDEDE;
     font-size: 4rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
 }
 
 .pokedex-container img {
@@ -61,6 +84,16 @@ justify-content: center;
     width: 10rem;
     margin-bottom: 3rem;
 }
+
+.pokedex-container p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 0.6rem;
+    font-weight: 400;
+} 
 
 .pokedex-container button {
     background: #3B4CCA;
