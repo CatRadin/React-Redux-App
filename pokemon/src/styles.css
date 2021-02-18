@@ -81,6 +81,7 @@ justify-content: center;
     font-size: 4rem;
     text-transform: capitalize;
     margin-top: 2rem;
+    align-self: center;
 }
 
 .pokedex-container img {
@@ -109,9 +110,12 @@ justify-content: center;
     font-weight: bold;
 } 
 
+
 .typeElectric {
     background: yellow;
 }
+
+/* Media Queries ! */
 
 @media screen and (max-width: 480px) {
     .pokedex-container{

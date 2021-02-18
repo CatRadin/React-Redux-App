@@ -6,7 +6,9 @@ import axios from 'axios'
 
 
 const Pokemon = (props) => {
+    //State passed in through Redux---------------------------------------
 const { pokemans, isFetching, error, getPokemon, success } = props
+//State used only here in Pokemon-----------------------------------------
 const [pokemon, setPokemon] = useState({
     name: 'Pikachu',
     sprites: {
@@ -24,7 +26,7 @@ const [pokemon, setPokemon] = useState({
     
     }]
 })
-
+//A use Effect that grabs the pokemon url from pokemans in Actions and fetches the data inside to be used in state here in Pokemon! ---------------------------
 useEffect(() => {
     axios.get(`${pokemans.url}`)
         .then(res => {
@@ -33,8 +35,7 @@ useEffect(() => {
         })
 }, [pokemans])
 
-console.log('Pokenonxxx',pokemon)
-
+//A click Handler to use the getPokemon action I made in actions. It fetches an random pokemon from the API
 const handleClick = () => {
     props.getPokemon(); 
 }
@@ -43,7 +44,6 @@ const handleClick = () => {
     return(
         <>
         <div className='pokedex-container'>
-        
         <h3>{pokemon.name}</h3>
         <div className='middle'>
         <img src={pokemon.sprites.front_default} alt='a pokemon'></img>

@@ -3,11 +3,9 @@ export const FETCH_POKEMON_LOADING = "FETCH_POKEMON_LOADING";
 export const FETCH_POKEMON_SUCCESS = "FETCH_POKEMON_SUCCESS";
 export const FETCH_POKEMON_FAIL = "FETCH_POKEMON_FAIL";
 
+
+//An action made through Thunk that uses a random number to grab a pokemon from the API Call -------------------------------
 export const getPokemon = () => {
-    //1. start load
-    //2. do our call
-    //3. success on a successful call
-    //4. fail on a failed call
     return dispatch => {
         let ranNum = Math.floor(Math.random() * 828 -1)
         dispatch({ type:FETCH_POKEMON_LOADING });
@@ -23,14 +21,14 @@ export const getPokemon = () => {
     }
 }
 
-export const fetchPokemonLoading = () => {
-    return({ type:FETCH_POKEMON_LOADING});
-}
+// export const fetchPokemonLoading = () => {
+//     return({ type:FETCH_POKEMON_LOADING});
+// }
 
-export const fetchPokemonSuccess = (pokemonName) => {
-    return({type:FETCH_POKEMON_SUCCESS, payload:pokemonName});
-}
+// export const fetchPokemonSuccess = (pokemonName) => {
+//     return({type:FETCH_POKEMON_SUCCESS, payload:pokemonName});
+// }
 
-export const fetchPokemonFail = (error) => {
-    return({type:FETCH_POKEMON_FAIL, payload:error});
-}
+// export const fetchPokemonFail = (error) => {
+//     return({type:FETCH_POKEMON_FAIL, payload:error});
+// }
